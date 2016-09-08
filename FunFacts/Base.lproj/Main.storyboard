@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,33 +15,63 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Fact Gos Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYV-pE-1xB">
-                                <rect key="frame" x="20" y="253" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYV-pE-1xB">
+                                <rect key="frame" x="40" y="268" width="520" height="65"/>
+                                <string key="text">You are born with 300 bones; by the time you are an adult you will have 206. You are born with 300 bones; by the time you are an adult you will have 206.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.20392156862745098" green="0.1803921568627451" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkI-ZK-Tk2">
-                                <rect key="frame" x="97" y="319" width="180" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkI-ZK-Tk2">
+                                <rect key="frame" x="40" y="480" width="520" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DFr-X7-JOp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.23529411764705882" green="0.56862745098039214" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Show Another Fun Fact"/>
                                 <connections>
                                     <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuv-46-hX3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did You Know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufD-Yw-M3S">
+                                <rect key="frame" x="40" y="126" width="121" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.20392156862745098" green="0.1803921568627451" blue="0.21568627450980393" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.56862745098039214" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bkI-ZK-Tk2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="1XJ-a8-yWL"/>
+                            <constraint firstItem="uYV-pE-1xB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="7Zn-3Y-bRv"/>
+                            <constraint firstItem="ufD-Yw-M3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dt6-9h-Aol"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uYV-pE-1xB" secondAttribute="trailing" constant="20" id="ETi-51-xFf"/>
+                            <constraint firstItem="ufD-Yw-M3S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="GRp-Yg-5Hk"/>
+                            <constraint firstItem="uYV-pE-1xB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PNG-VB-2lA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bkI-ZK-Tk2" secondAttribute="bottom" constant="80" id="TlA-7m-eqB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bkI-ZK-Tk2" secondAttribute="trailing" constant="20" id="ZWU-jT-Vra"/>
+                            <constraint firstItem="uYV-pE-1xB" firstAttribute="top" secondItem="ufD-Yw-M3S" secondAttribute="bottom" constant="120" id="m47-rP-H1E"/>
+                            <constraint firstItem="ufD-Yw-M3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="xPS-ZE-iIa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dt6-9h-Aol"/>
+                                <exclude reference="m47-rP-H1E"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="FunFactLabel" destination="uYV-pE-1xB" id="wzf-G3-f0F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296.5" y="383.5"/>
+            <point key="canvasLocation" x="296" y="383"/>
         </scene>
     </scenes>
 </document>
