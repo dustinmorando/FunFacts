@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var funFactLabel: UILabel!
+    
+    @IBOutlet weak var funFactButton: UIButton!
+    
     let factModel = FactModel()
     
     
@@ -25,6 +28,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showFunFact() {
+        let randomeColor = ColorModel().getRandomColor()
+        view.backgroundColor = randomeColor
+        funFactButton.tintColor = randomeColor
         funFactLabel.text = factModel.getRandomFact()
     }
     

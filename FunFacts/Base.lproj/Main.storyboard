@@ -32,8 +32,8 @@
                                     <constraint firstAttribute="height" constant="40" id="DFr-X7-JOp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" red="0.23529411764705882" green="0.56862745098039214" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Show Another Fun Fact"/>
+                                <color key="tintColor" red="0.20392156859999999" green="0.18039215689999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Another Fun Fact!"/>
                                 <connections>
                                     <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuv-46-hX3"/>
                                 </connections>
@@ -67,6 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="FunFactLabel" destination="uYV-pE-1xB" id="wzf-G3-f0F"/>
+                        <outlet property="funFactButton" destination="bkI-ZK-Tk2" id="MWW-We-DgK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
